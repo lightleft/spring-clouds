@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active:
+    - dev
+  application:
+    name: config-server
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/lightleft/configs.git
+          searchPaths: respo
+          username: null
+          password: null
+server:
+  port: 0
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.int}
