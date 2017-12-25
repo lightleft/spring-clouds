@@ -10,7 +10,6 @@ spring:
       server:
         git:
           uri: https://github.com/lightleft/configs.git
-          searchPaths: respo
           username: null
           password: null
 server:
