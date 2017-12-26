@@ -8,6 +8,10 @@ public class DataSourceProperties {
 
 	// 对应配置文件里的配置键
 
+	
+
+	public final static String PREFIX = "datasource";
+
 	@Override
 	public String toString() {
 		return "DataSourceProperties [driver=" + driver + ", url=" + url + ", username=" + username + ", password="
@@ -17,10 +21,8 @@ public class DataSourceProperties {
 				+ ", testWhileIdle=" + testWhileIdle + ", testOnBorrow=" + testOnBorrow + ", testOnReturn="
 				+ testOnReturn + ", poolPreparedStatements=" + poolPreparedStatements
 				+ ", maxPoolPreparedStatementPerConnectionSize=" + maxPoolPreparedStatementPerConnectionSize
-				+ ", filters=" + filters + "]";
+				+ ", filters=" + filters + ", connectionProperties=" + connectionProperties + "]";
 	}
-
-	public final static String PREFIX = "datasource";
 
 	private String driver;
 	private String url;
@@ -39,7 +41,7 @@ public class DataSourceProperties {
 	private Boolean poolPreparedStatements = true;
 	private Integer maxPoolPreparedStatementPerConnectionSize = 100;
 	private String filters = "slf4j";
-
+	private String connectionProperties;
 	public String getValidationQuery() {
 		return validationQuery;
 	}
@@ -174,6 +176,14 @@ public class DataSourceProperties {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getConnectionProperties() {
+		return connectionProperties;
+	}
+
+	public void setConnectionProperties(String connectionProperties) {
+		this.connectionProperties = connectionProperties;
 	}
 
 }

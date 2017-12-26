@@ -65,6 +65,7 @@ public class Conf {
 		dataSource.setMaxOpenPreparedStatements(dataSourceProperties.getMaxPoolPreparedStatementPerConnectionSize());
 		// 配置sql监控的filter
 		dataSource.setFilters(dataSourceProperties.getFilters());
+		dataSource.setConnectionProperties(dataSourceProperties.getConnectionProperties());
 		try {
 			dataSource.init();
 			logger.debug("DataSource init success!");
