@@ -1,6 +1,6 @@
-*/target/*
-*.project
+*/target/
+*/.project
 *.class
-.classpath
-*/.settings/*
-.factorypath
+*/.classpath
+*/.settings/
+*/.factorypath
