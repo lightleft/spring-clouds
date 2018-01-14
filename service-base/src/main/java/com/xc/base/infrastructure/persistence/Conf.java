@@ -22,7 +22,7 @@ import com.xc.base.infrastructure.persistence.properties.DataSourceProperties;
 @Configuration
 public class Conf {
 	private final Logger logger = LoggerFactory.getLogger(Conf.class);
-	//@Autowired
+	
 	private DataSourceProperties dataSourceProperties;
 
 	@Bean
